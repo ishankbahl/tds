@@ -40,11 +40,11 @@ class App extends Component{
                 tabValue={ this.state.tabValue }
                 />
                 <Route exact path="/" component={ Upload } />
-                <Route exact path="/" component={ Analysis } />
-                <Route exact path="/" component={ Working } />
+                <Route exact path="/analysis" component={ Analysis } />
+                <Route exact path="/working" component={ Working } />
             </div>
         );
     }
 }
 
-export default ComponentWrappers(App);
+export default ComponentWrappers(withRouter(App));
